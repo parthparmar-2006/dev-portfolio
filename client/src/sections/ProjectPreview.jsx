@@ -1,25 +1,40 @@
-// src/sections/ProjectPreview.jsx
 import React from "react";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import ngo1 from '../assets/ngo1.png';
+import ngo3 from '../assets/ngo3.png';
+import ham1 from '../assets/ham1.png';
+import ham2 from '../assets/ham2.png';
+import sch1 from '../assets/sch1.png';
+import sch2 from '../assets/sch2.png';
 
-// ...existing code...
+// Import 3 projects from Projects.jsx (manually copied for preview)
 const projects = [
   {
-    title: "AI Chat App",
-    description: "A real-time chatbot using OpenAI API with user authentication and chat history.",
-    link: "/projects/ai-chat",
-    icon: "🤖",
+    title: "No Code Data Analysis Tool",
+    description: "A no code data analysis tool that transforms raw Excel data into dynamic charts, AI-generated insights, and exportable reports.",
+    image: ngo1,
+    link: "/projects", // or a specific project page if you have one
+    try: "https://data-analysis-tool-eight.vercel.app/",
+    view: "",
+    topics: ["Generative AI", "React", "Node.js", "Plotly.js"],
   },
   {
-    title: "DSA Tracker",
-    description: "Track your DSA progress across LeetCode and GFG with detailed analytics and streaks.",
-    link: "/projects/dsa-tracker",
-    icon: "📈",
+    title: "Hamming Code Visualizer",
+    description: "The concept of error detection and correction through Hamming Code from 4 to 16 bits is demonstrated here.",
+    image: ham1,
+    link: "/projects",
+    try: "https://parthparmar-2006.github.io/Hamming-Code-Visualizer/",
+    view: "https://github.com/parthparmar-2006/Hamming-Code-Visualizer",
+    topics: ["JavaScript", "CSS", "HTML"],
   },
   {
-    title: "DevConnect",
-    description: "A MERN-based developer community platform for blogs, profiles, and collaboration.",
-    link: "/projects/devconnect",
-    icon: "🌐",
+    title: "Guaranteed-Scheduling-Simulation",
+    description: "A preemptive, ratio-based scheduling algorithm that dynamically prioritizes processes based on the ratio of their allocated to entitled CPU time.",
+    image: sch1,
+    link: "/projects",
+    try: "https://parthparmar-2006.github.io/Guaranteed-Scheduling-Simulation/",
+    view: "https://github.com/parthparmar-2006/Guaranteed-Scheduling-Simulation",
+    topics: ["JavaScript", "CSS", "HTML"],
   },
 ];
 
@@ -34,16 +49,48 @@ const ProjectPreview = () => {
             className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-md p-8 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition transform"
           >
             <div>
-              <div className="text-4xl mb-3">{project.icon}</div>
+              {project.image && (
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-40 object-cover rounded-xl mb-4"
+                />
+              )}
               <h3 className="text-xl font-semibold mb-2 text-gray-800">{project.title}</h3>
-              <p className="text-sm text-gray-600">{project.description}</p>
+              <p className="text-sm text-gray-600 mb-3">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-2">
+                {project.topics?.map((topic, i) => (
+                  <span
+                    key={i}
+                    className="bg-blue-100 text-blue-700 text-xs font-semibold px-2 py-1 rounded"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </div>
             </div>
-            <a
-              href={project.link}
-              className="mt-6 text-blue-600 font-medium hover:underline"
-            >
-              View Project →
-            </a>
+            <div className="flex gap-3 mt-4">
+              {project.view && (
+                <a
+                  href={project.view}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-gray-700 hover:text-blue-700 text-sm font-medium"
+                >
+                  <FaGithub /> Code
+                </a>
+              )}
+              {project.try && (
+                <a
+                  href={project.try}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1 text-blue-600 hover:underline text-sm font-medium"
+                >
+                  <FaExternalLinkAlt /> Live
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -58,6 +105,5 @@ const ProjectPreview = () => {
     </div>
   );
 };
-// ...existing code...
 
 export default ProjectPreview;

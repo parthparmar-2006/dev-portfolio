@@ -1,31 +1,20 @@
 import React, { useState } from "react";
 import { FaExternalLinkAlt, FaTrophy } from "react-icons/fa";
 
+import mined1 from "../assets/mined1.png";
+
 const hackathons = [
   {
-    name: "CodeSprint 2024",
-    award: "2nd Prize",
-    period: "March 2024",
+    name: "MINeD Hackathon",
+    award: "Participant",
+    period: "Mar 2025",
     images: [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=900&q=80",
+      mined1
     ],
     description:
-      "Built a DSA Tracker app with analytics and streaks. Presented to a panel of judges and won 2nd prize among 100+ teams.",
-    skills: ["React", "Analytics", "LeetCode API"],
-    link: "https://codesprint.com",
-  },
-  {
-    name: "AI Hackathon",
-    award: "Finalist",
-    period: "Jan 2024",
-    images: [
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=900&q=80",
-    ],
-    description:
-      "Developed an AI chatbot using OpenAI API. Selected as a finalist for innovative use of AI in education.",
-    skills: ["OpenAI", "Node.js", "UI/UX"],
-    link: "",
+      "Developed an AI-powered Smart Route Optimizer for Intech Creative Services, optimizing logistics through intelligent shipment clustering, EV vehicle assignment, MST-based routing, and data-driven visual insights—boosting efficiency, sustainability, and utilization.",
+    skills: ["AI", "ML", "React", "Node.js"],
+    link: "https://mined2025.tech/",
   },
 ];
 
@@ -49,7 +38,7 @@ const Hackathon = () => {
       <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-100 rounded-full opacity-10 animate-pulse pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto">
-        <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-900">Hackathon</h2>
+        <h2 className="text-3xl font-extrabold text-center mb-12 text-gray-900">Hackathons</h2>
         {hackathons.map((hack, idx) => (
           <div
             key={idx}

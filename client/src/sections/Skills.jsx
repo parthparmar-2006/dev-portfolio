@@ -1,6 +1,6 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
-import { SiJavascript, SiMongodb, SiTailwindcss, SiCplusplus, SiExpress, SiTensorflow, SiPytorch, SiMysql, SiPostgresql, SiRedux } from "react-icons/si";
+import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaGitAlt, FaJava } from "react-icons/fa";
+import { SiJavascript, SiMongodb, SiTailwindcss, SiCplusplus, SiExpress, SiTensorflow, SiPytorch, SiMysql, SiPostgresql, SiRedux, SiSpringboot, SiJquery, SiPandas } from "react-icons/si";
 
 const skillCategories = [
   {
@@ -37,6 +37,11 @@ const skillCategories = [
         profile: "Core language of the web, powering dynamic experiences.",
       },
       {
+        name: "jQuery",
+        icon: <SiJquery className="text-blue-400 text-4xl" />,
+        profile: "Popular JavaScript library for DOM manipulation and AJAX.",
+      },
+      {
         name: "HTML5",
         icon: <FaHtml5 className="text-orange-500 text-4xl" />,
         profile: "Markup standard for structuring web content.",
@@ -71,6 +76,11 @@ const skillCategories = [
         icon: <SiPytorch className="text-red-500 text-4xl" />,
         profile: "Deep learning framework for flexible research and production.",
       },
+      {
+        name: "Pandas",
+        icon: <SiPandas className="text-black text-4xl" />,
+        profile: "Powerful Python library for data analysis and manipulation.",
+      },
     ],
   },
   {
@@ -97,6 +107,16 @@ const skillCategories = [
     title: "Other",
     skills: [
       {
+        name: "Java",
+        icon: <FaJava className="text-red-700 text-4xl" />,
+        profile: "Robust, object-oriented language for enterprise applications.",
+      },
+      {
+        name: "Spring Boot",
+        icon: <SiSpringboot className="text-green-700 text-4xl" />,
+        profile: "Java framework for building production-ready web services.",
+      },
+      {
         name: "C++",
         icon: <SiCplusplus className="text-blue-700 text-4xl" />,
         profile: "High-performance language for systems and DSA.",
@@ -109,6 +129,8 @@ const skillCategories = [
     ],
   },
 ];
+
+// ...existing code...
 
 const Skills = () => (
   <section

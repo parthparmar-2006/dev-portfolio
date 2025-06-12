@@ -1,44 +1,55 @@
 import React, { useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
+import ngo1 from '../assets/ngo1.png';
+import ngo2 from '../assets/ngo2.jpg';
+import ngo3 from '../assets/ngo3.png';
+
+import ham1 from '../assets/ham1.png';
+import ham2 from '../assets/ham2.png';
+
+import sch1 from '../assets/sch1.png';
+import sch2 from '../assets/sch2.png';
+
 const projects = [
   {
-    title: "AI Chat App",
-    topics: ["AI", "Chatbot", "OpenAI", "React", "Node.js"],
-    where: "Personal Project",
+    title: "No Code Data Analysis Tool",
+    topics: ["Generative AI", "React", "Node.js", "Plotly.js"],
+    where: "For Saath Charitable Trust",
     images: [
-      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80",
+      ngo1,
+      ngo3
     ],
     description:
-      "A real-time chatbot using OpenAI API with user authentication and chat history. Built with MERN stack and deployed on Vercel.",
-    view: "https://github.com/your-github-id/ai-chat-app",
-    try: "https://ai-chat-app-demo.vercel.app/",
+      "A no code data analysis tool that transforms raw Excel data into dynamic charts, AI-generated insights, and exportable reports.",
+    view: "",
+    try: "https://data-analysis-tool-eight.vercel.app/",
   },
   {
-    title: "DSA Tracker",
-    topics: ["DSA", "Analytics", "LeetCode", "GFG", "React"],
-    where: "Hackathon",
+    title: "Hamming Code Visualizer",
+    topics: ["JavaScript", "CSS", "HTML"],
+    where: "Coursework: Data Communication",
     images: [
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80",
+      ham1,
+      ham2
     ],
     description:
-      "Track your DSA progress across LeetCode and GFG with detailed analytics and streaks. Won 2nd prize at CodeSprint 2024.",
-    view: "https://github.com/your-github-id/dsa-tracker",
-    try: "",
+      "The concept of error detection and correction through Hamming Code from 4 to 16 bits is demonstrated here.",
+    view: "https://github.com/parthparmar-2006/Hamming-Code-Visualizer",
+    try: "https://parthparmar-2006.github.io/Hamming-Code-Visualizer/",
   },
   {
-    title: "DevConnect",
-    topics: ["Community", "MERN", "Blog", "Collaboration"],
-    where: "College Project",
+    title: "Guaranteed-Scheduling-Simulation",
+    topics: ["JavaScript", "CSS", "HTML"],
+    where: "Coursework: Operating System",
     images: [
-      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80",
+      sch1,
+      sch2
     ],
     description:
-      "A MERN-based developer community platform for blogs, profiles, and collaboration. Features real-time chat and markdown blog editor.",
-    view: "https://github.com/your-github-id/devconnect",
-    try: "",
+      "This project involved implementing a preemptive, ratio-based scheduling algorithm that dynamically prioritizes processes based on the ratio of their allocated to entitled CPU time.",
+    view: "https://github.com/parthparmar-2006/Guaranteed-Scheduling-Simulation",
+    try: "https://parthparmar-2006.github.io/Guaranteed-Scheduling-Simulation/",
   },
 ];
 
@@ -114,21 +125,23 @@ const Projects = () => {
                   ))}
                 </div>
                 <div className="mb-3 text-base text-gray-500">
-                  <span className="font-medium">Where:</span> {project.where}
+                  <span className="font-medium"></span> {project.where}
                 </div>
                 <p className="text-gray-700 mb-6 text-lg">
                   {project.description}
                 </p>
               </div>
               <div className="flex gap-4 mt-2">
-                <a
-                  href={project.view}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition text-lg"
-                >
-                  <FaGithub /> View Code
-                </a>
+                {project.view && (
+                  <a
+                    href={project.view}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition text-lg"
+                  >
+                    <FaGithub /> View Code
+                  </a>
+                )}
                 {project.try && (
                   <a
                     href={project.try}

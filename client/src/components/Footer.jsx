@@ -11,7 +11,7 @@ const Footer = () => (
     <div className="flex flex-col items-center gap-4">
       <div className="flex gap-6 mb-2">
         <a
-          href="https://github.com/your-github-id"
+          href="https://github.com/parthparmar-2006"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-500 hover:text-gray-900 text-2xl transition"
@@ -20,7 +20,7 @@ const Footer = () => (
           <FaGithub />
         </a>
         <a
-          href="https://linkedin.com/in/your-linkedin-id"
+          href="https://www.linkedin.com/in/parthparmar06/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 hover:text-blue-800 text-2xl transition"
@@ -29,7 +29,7 @@ const Footer = () => (
           <FaLinkedin />
         </a>
         <a
-          href="mailto:your@email.com"
+          href="mailto:parthbparmar06@email.com"
           className="text-red-500 hover:text-red-700 text-2xl transition"
           aria-label="Email"
         >

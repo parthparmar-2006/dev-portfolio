@@ -4,7 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const roles = [
   "Full-Stack Developer",
-  "AI/ML Enthusiast",
+  "AI/ML Engineer",
   "Open Source Contributor",
   "DSA Solver",
 ];
@@ -29,7 +29,7 @@ const Hero = () => (
     </div>
 
     {/* Name and Typewriter */}
-    <h1 className="text-4xl md:text-6xl font-extrabold mb-3 tracking-tight text-gray-900 dark:text-white drop-shadow-lg">
+    <h1 className="text-4xl font-sans md:text-6xl font-extrabold mb-3 tracking-tight text-gray-900 dark:text-white drop-shadow-lg">
       Parth Parmar
     </h1>
     <h2 className="text-xl md:text-2xl text-blue-600 dark:text-blue-300 font-semibold mb-6 min-h-[2.5rem]">
@@ -44,13 +44,13 @@ const Hero = () => (
       />
     </h2>
     <p className="max-w-xl mx-auto text-gray-600 dark:text-gray-300 mb-8 text-lg">
-      I build modern web apps, solve tough problems, and love sharing knowledge. Let’s create something amazing together!
+      Turning ideas into production-ready applications with solid architecture, efficient code, and data-driven intelligence.
     </p>
 
     {/* Social Icons */}
     <div className="flex gap-6 justify-center mb-8">
       <a
-        href="https://github.com/your-github-id"
+        href="https://github.com/parthparmar-2006"
         target="_blank"
         rel="noopener noreferrer"
         className="text-gray-500 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white text-2xl transition"
@@ -59,7 +59,7 @@ const Hero = () => (
         <FaGithub />
       </a>
       <a
-        href="https://linkedin.com/in/your-linkedin-id"
+        href="https://www.linkedin.com/in/parthparmar06/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 text-2xl transition"
@@ -68,7 +68,7 @@ const Hero = () => (
         <FaLinkedin />
       </a>
       <a
-        href="mailto:your@email.com"
+        href="mailto:parthbparmar06@email.com"
         className="text-red-500 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 text-2xl transition"
         aria-label="Email"
       >
@@ -88,7 +88,7 @@ const Hero = () => (
         href="/resume"
         className="border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-300 px-6 py-2 rounded-full hover:bg-blue-50 dark:hover:bg-gray-800 transition font-semibold"
       >
-        Download Resume
+        View Resume
       </a>
     </div>
   </section>
