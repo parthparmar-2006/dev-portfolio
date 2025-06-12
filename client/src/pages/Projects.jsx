@@ -65,7 +65,7 @@ const Projects = () => {
 
   return (
     <section
-      className="relative py-16 px-4 min-h-screen flex flex-col items-center justify-center pt-28"
+      className="relative py-16 px-2 sm:px-4 min-h-screen flex flex-col items-center justify-center pt-28"
       style={{
         background: "linear-gradient(120deg, #e0e7ff 0%, #f0fdfa 100%)",
       }}
@@ -81,23 +81,23 @@ const Projects = () => {
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className="bg-white/90 backdrop-blur rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden mb-14 hover:shadow-blue-200 transition"
+            className="bg-white/90 backdrop-blur rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden mb-10 hover:shadow-blue-200 transition"
           >
-            {/* Gallery Section (50%) */}
-            <div className="md:w-1/2 w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white p-6">
+            {/* Gallery Section */}
+            <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white p-4 sm:p-6">
               <img
                 src={project.images[mainImages[idx]]}
                 alt={project.title + " screenshot"}
-                className="w-full h-80 object-cover rounded-xl shadow"
+                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-xl shadow"
               />
               {project.images.length > 1 && (
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-3">
                   {project.images.map((img, imgIdx) => (
                     <img
                       key={imgIdx}
                       src={img}
                       alt={project.title + " thumb " + (imgIdx + 1)}
-                      className={`w-16 h-16 object-cover rounded cursor-pointer border-2 transition ${
+                      className={`w-12 h-12 sm:w-16 sm:h-16 object-cover rounded cursor-pointer border-2 transition ${
                         mainImages[idx] === imgIdx
                           ? "border-blue-600 ring-2 ring-blue-300"
                           : "border-transparent"
@@ -108,36 +108,36 @@ const Projects = () => {
                 </div>
               )}
             </div>
-            {/* Info Section (50%) */}
-            <div className="md:w-1/2 w-full p-10 flex flex-col justify-between">
+            {/* Info Section */}
+            <div className="w-full md:w-1/2 p-5 sm:p-8 flex flex-col justify-between">
               <div>
-                <h3 className="text-3xl font-bold text-blue-700 mb-3">
+                <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-2 sm:mb-3">
                   {project.title}
                 </h3>
-                <div className="flex flex-wrap gap-2 mb-3">
+                <div className="flex flex-wrap gap-2 mb-2 sm:mb-3">
                   {project.topics.map((topic, i) => (
                     <span
                       key={i}
-                      className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold"
+                      className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold"
                     >
                       {topic}
                     </span>
                   ))}
                 </div>
-                <div className="mb-3 text-base text-gray-500">
+                <div className="mb-2 sm:mb-3 text-sm sm:text-base text-gray-500">
                   <span className="font-medium"></span> {project.where}
                 </div>
-                <p className="text-gray-700 mb-6 text-lg">
+                <p className="text-gray-700 mb-4 sm:mb-6 text-base sm:text-lg">
                   {project.description}
                 </p>
               </div>
-              <div className="flex gap-4 mt-2">
+              <div className="flex gap-3 sm:gap-4 mt-2">
                 {project.view && (
                   <a
                     href={project.view}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition text-lg"
+                    className="flex items-center gap-2 bg-blue-600 text-white px-4 sm:px-6 py-2 rounded-full font-semibold shadow hover:bg-blue-700 transition text-base sm:text-lg"
                   >
                     <FaGithub /> View Code
                   </a>
@@ -147,7 +147,7 @@ const Projects = () => {
                     href={project.try}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition text-lg"
+                    className="flex items-center gap-2 border border-blue-600 text-blue-600 px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition text-base sm:text-lg"
                   >
                     <FaExternalLinkAlt /> Try It
                   </a>
