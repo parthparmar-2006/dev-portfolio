@@ -4,38 +4,36 @@ import { FaExternalLinkAlt, FaBuilding } from "react-icons/fa";
 import efive1 from '../assets/efive1.png';
 import efive2 from '../assets/efive2.png';
 import ngo1 from '../assets/ngo1.png';
-import ngo2 from '../assets/ngo2.jpg';
 import ngo3 from '../assets/ngo3.png';
 
 const experiences = [
   {
     role: "Java Software Developer Intern",
     company: "Emerging Five",
-    period: "1 Jun 2025 – 30 Jun 2025",
+    period: "June 2025",
     location: "On-site",
     images: [
       efive1,
       efive2
     ],
     description:
-      "Currently working on building robust RESTful APIs using Spring Boot. Focused on backend architecture, data modeling, and integrating secure, scalable endpoints for a full-stack application.",
-    skills: ["Spring Boot", "JQuery", "PostreSQL"],
-    link: "https://saath.org/",
+      "Built robust RESTful APIs using Spring Boot. Focused on backend architecture, data modeling, and integrating secure, scalable endpoints for a full-stack application.",
+    skills: ["Spring Boot", "jQuery", "PostgreSQL"],
+    link: "https://emergingfive.com/",
   },
   {
     role: "Data Analyst Intern",
     company: "Saath Charitable Trust",
-    period: "8 May 2025 – 28 May 2025",
+    period: "May 2025",
     location: "On-site",
     images: [
       ngo1,
-      // ngo2,
       ngo3
     ],
     description:
-      "During my 3-week internship at Saath in Ahmedabad, I developed a custom data analysis tool that transforms raw Excel data into dynamic charts, AI-generated insights, and exportable reports.",
+      "Developed a custom no-code data analysis tool that transforms raw Excel data into dynamic charts, AI-generated insights, and exportable reports.",
     skills: ["React", "DeepSeek AI", "Plotly.js"],
-    link: "https://emergingfive.com/",
+    link: "https://saath.org/",
   },
 ];
 
@@ -50,7 +48,7 @@ const Experience = () => {
 
   return (
     <section
-      className="relative py-16 px-4 min-h-screen flex flex-col items-center justify-center pt-28"
+      className="relative py-16 px-2 sm:px-4 min-h-screen flex flex-col items-center justify-center pt-28"
       style={{
         background: "linear-gradient(120deg, #e0e7ff 0%, #f0fdfa 100%)",
       }}
@@ -65,23 +63,23 @@ const Experience = () => {
         {experiences.map((exp, idx) => (
           <div
             key={idx}
-            className="bg-white/90 backdrop-blur rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden mb-14 hover:shadow-blue-200 transition"
+            className="bg-white/90 backdrop-blur rounded-3xl shadow-2xl flex flex-col md:flex-row overflow-hidden mb-10 hover:shadow-blue-200 transition"
           >
             {/* Gallery Section */}
-            <div className="md:w-1/2 w-full flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white p-6">
+            <div className="w-full md:w-1/2 flex flex-col items-center justify-center bg-gradient-to-br from-blue-50 to-white p-4 sm:p-6">
               <img
                 src={exp.images[mainImages[idx]]}
                 alt={exp.company + " logo"}
-                className="w-full h-80 object-cover rounded-xl shadow"
+                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-xl shadow"
               />
               {exp.images.length > 1 && (
-                <div className="flex gap-2 mt-4">
+                <div className="flex gap-2 mt-3">
                   {exp.images.map((img, imgIdx) => (
                     <img
                       key={imgIdx}
                       src={img}
                       alt={exp.company + " thumb " + (imgIdx + 1)}
-                      className={`w-16 h-16 object-cover rounded cursor-pointer border-2 transition ${
+                      className={`w-12 h-12 sm:w-16 sm:h-16 object-cover rounded cursor-pointer border-2 transition ${
                         mainImages[idx] === imgIdx
                           ? "border-blue-600 ring-2 ring-blue-300"
                           : "border-transparent"
@@ -93,9 +91,9 @@ const Experience = () => {
               )}
             </div>
             {/* Info Section */}
-            <div className="md:w-1/2 w-full p-10 flex flex-col justify-between">
+            <div className="w-full md:w-1/2 p-5 sm:p-8 flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl font-bold text-blue-700 mb-2">
+                <h3 className="text-2xl sm:text-3xl font-bold text-blue-700 mb-2 sm:mb-3">
                   {exp.role}
                 </h3>
                 <div className="text-blue-700 font-bold text-lg mb-1 flex items-center gap-2">
@@ -107,20 +105,20 @@ const Experience = () => {
                   {exp.skills.map((skill, i) => (
                     <span
                       key={i}
-                      className="bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-sm font-semibold"
+                      className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs sm:text-sm font-semibold"
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-700 mb-6 text-lg">{exp.description}</p>
+                <p className="text-gray-700 mb-4 sm:mb-6 text-base sm:text-lg">{exp.description}</p>
               </div>
               {exp.link && (
                 <a
                   href={exp.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 border border-blue-600 text-blue-600 px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition text-lg w-max"
+                  className="flex items-center gap-2 border border-blue-600 text-blue-600 px-4 sm:px-6 py-2 rounded-full font-semibold hover:bg-blue-50 transition text-base sm:text-lg w-max"
                 >
                   <FaExternalLinkAlt /> Company Site
                 </a>
