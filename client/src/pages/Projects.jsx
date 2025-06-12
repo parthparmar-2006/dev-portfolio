@@ -39,7 +39,7 @@ const projects = [
     try: "https://parthparmar-2006.github.io/Hamming-Code-Visualizer/",
   },
   {
-    title: "Guaranteed-Scheduling-Simulation",
+    title: "Guaranteed Scheduling Simulation",
     topics: ["JavaScript", "CSS", "HTML"],
     where: "Coursework: Operating System",
     images: [

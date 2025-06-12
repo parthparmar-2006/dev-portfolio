@@ -2,6 +2,8 @@ import React from "react";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
+import me from "../assets/me.jpeg";
+
 const roles = [
   "Full-Stack Developer",
   "AI/ML Engineer",
@@ -22,7 +24,7 @@ const Hero = () => (
     <div className="relative mb-6">
       <div className="absolute inset-0 rounded-full border-4 border-blue-400 dark:border-blue-700 animate-spin-slow" />
       <img
-        src="https://avatars.githubusercontent.com/u/your-github-id"
+        src={me}
         alt="Parth Parmar"
         className="w-36 h-36 rounded-full object-cover border-4 border-white dark:border-gray-900 shadow-xl relative z-10"
       />

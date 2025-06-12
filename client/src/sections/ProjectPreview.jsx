@@ -28,7 +28,7 @@ const projects = [
     topics: ["JavaScript", "CSS", "HTML"],
   },
   {
-    title: "Guaranteed-Scheduling-Simulation",
+    title: "Guaranteed Scheduling Simulation",
     description: "A preemptive, ratio-based scheduling algorithm that dynamically prioritizes processes based on the ratio of their allocated to entitled CPU time.",
     image: sch1,
     link: "/projects",
